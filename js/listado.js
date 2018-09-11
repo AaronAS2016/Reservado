@@ -86,6 +86,7 @@ Listado.prototype.obtH = function() {
 //Función que recibe los filtros que llegan desde el HTML y filtra el arreglo de restaurantes.
 //Solo se filtra si el valor recibido es distinto de null.
 Listado.prototype.obtenerRestaurantes = function(filtroRubro, filtroCiudad, filtroHorario) {
+    console.log(filtroRubro, filtroCiudad, filtroHorario)
     var restaurantesFiltrados = this.restaurantes;
     if (filtroRubro !== null) {
         restaurantesFiltrados = restaurantesFiltrados.filter(restaurant => restaurant.rubro == filtroRubro);
