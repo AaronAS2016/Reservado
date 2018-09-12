@@ -79,9 +79,9 @@ describe('Testeá la función buscarRestaurante(id)', function(){
             new Restaurant(3, "Burgermeister", "Hamburguesa", "Berlín", ["11:30", "12:00", "22:30"], "../img/hamburguesa4.jpg", [5, 8, 4, 9, 9])
         ];
         
-        var listado = new Listado(listadoDeRestaurantes)
+        var listadoDeTest = new Listado(listadoDeRestaurantes)
 
-        let restaurante = listado.buscarRestaurante(5)
+        let restaurante = listadoDeTest.buscarRestaurante(5)
         expect(restaurante).to.equal("No se ha encontrado ningún restaurant");
     })
 })
