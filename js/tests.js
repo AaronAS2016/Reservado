@@ -155,3 +155,21 @@ describe('Testeá la función obtenerRestaurantes()', function(){
         expect(restaurante).to.lengthOf(2);
     })
 })
+
+
+//Requerimiento: calcular el total de los productos del carrito
+describe('Funcioanlidad Extra', function(){
+	it('Cuando se pide el precio base, se calcula correctamente',function(){
+        var reserva = new Reserva (new Date(2018, 7, 24, 11, 00), 8, 350, "DES1")
+        //var reserva2 = new Reserva (new Date(2018, 7, 27, 14, 100), 2, 150, "DES200")
+        let precioBase = reserva.calcularPrecioBase()
+        expect(precioBase).to.equal(2800);
+    })
+
+	it('Cuando se pide el precio final, se calcula correctamente',function(){
+        var reserva = new Reserva (new Date(2018, 7, 24, 11, 00), 8, 350, "DES1")
+        //var reserva = new Reserva (new Date(2018, 7, 27, 14, 100), 2, 150, "DES200")
+        let precioFinal = reserva.calcularPrecioFinal()
+        expect(precioFinal).to.equal(2310);
+    })
+})
